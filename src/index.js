@@ -34,9 +34,20 @@ const getHTML = function(title, rating, id) {
 
 const addMovie = () =>
     $('#submit').on('click', function() {
-      let title = $('#title').val();
-      let rating = $('input[name = rating]:checked').val();
-      console.log(`${title} ${rating}`);
+
+      const newMovie = {
+          title: $('#title').val(),
+          rating: $('input[name = rating]:checked').val(),
+          // id: something
+      };
+      const url = 'api/movies';
+      const options = {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(newMovie),
+      }
 
     });
 addMovie();
