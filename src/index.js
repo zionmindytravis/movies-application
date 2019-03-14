@@ -31,3 +31,12 @@ const getHTML = function(title, rating, id) {
 
     return html;
 };
+
+const addMovie = () =>
+    $('#submit').on('click', function() {
+      let title = $('#title').val();
+      let rating = $('input[name = rating]:checked').val();
+      console.log(`${title} ${rating}`);
+
+    });
+addMovie();
