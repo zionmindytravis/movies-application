@@ -19,3 +19,7 @@ html, body {
 #movie-form {
     background-color: #578C90;
 }
+
+.hide{
+    display: none;
+}
