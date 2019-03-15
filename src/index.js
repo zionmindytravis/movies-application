@@ -26,9 +26,14 @@ getMovies().then((movies) => {
 });
 
 const getHTML = function(title, rating, id) {
-  let html = `<div><h1>${title}</h1><p><strong>`;
-      html+= `</strong>Rating:</strong> `;
+  let html = `<div class="col-6">`;
+      html += `<div class="row">`;
+      html += `<h2>${title}</h2><p><strong>`;
+      html+= `</strong>Rating:`;
       html += `${rating}</p></div>`;
+      html += `<button id="edit" class="btn btn-warning mr-4 row" type="submit">Edit</button>
+            <button id="delete" class="btn btn-danger mr-4 row" type="submit">Delete</button>`;
+      html += `</div>`;
 
     return html;
 };

@@ -12,3 +12,6 @@ html, body {
 #ajaxLoader{
     display: none;
 }
+#ratingRow, #btnRow {
+    width: 50%;
+}
