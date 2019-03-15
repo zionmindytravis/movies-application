@@ -13,12 +13,22 @@
 const {getMovies} = require('./api.js');
 const {postMovies} = require('./api.js');
 
+
 getMovies().then((movies) => {
-  // console.log('Here are all the movies:');
+
   movies.forEach(({title, rating, id}) => {
 
     $('#movies').append(getHTML(title, rating, id));
-    // console.log(`id#${id} - ${title} - rating: ${rating}`);
+
+
+    $(`#edit${id}`).on('click', function () {
+        console.log(`You clicked edit${id}`);
+    });
+
+    $(`#delete${id}`).on('click', function () {
+        console.log(`You clicked delete${id}`);
+    });
+
   });
 }).catch((error) => {
   alert('Oh no! Something went wrong.\nCheck the console for details.')
@@ -26,13 +36,13 @@ getMovies().then((movies) => {
 });
 
 const getHTML = function(title, rating, id) {
-  let html = `<div class="col-6">`;
+  let html =  `<div class="col-6">`;
       html += `<div class="row">`;
-      html += `<h2>${title}</h2><p><strong>`;
-      html+= `</strong>Rating:`;
+      html += `<h2>${title}</h2><p>`;
+      html += `<strong>Rating:</strong>`;
       html += `${rating}</p></div>`;
-      html += `<button id="edit" class="btn btn-warning mr-4 row" type="submit">Edit</button>
-            <button id="delete" class="btn btn-danger mr-4 row" type="submit">Delete</button>`;
+      html += `<button id="edit${id}" class="btn btn-warning mr-4 row" type="submit">Edit</button>
+            <button id="delete${id}" class="btn btn-danger mr-4 row" type="submit">Delete</button>`;
       html += `</div>`;
 
     return html;
@@ -40,7 +50,7 @@ const getHTML = function(title, rating, id) {
 
 const addMovie = () =>
     $('#submit').on('click', function() {
-
+        console.log(`You clicked the submit button`);
         const newMovie = {
             title: $('#title').val(),
             rating: $('input[name = rating]:checked').val(),
@@ -48,11 +58,8 @@ const addMovie = () =>
 
         postMovies(newMovie);
         getMovies().then((movies) => {
-            // console.log('Here are all the movies:');
             movies.forEach(({title, rating, id}) => {
-
                 $('#movies').append(getHTML(title, rating, id));
-                // console.log(`id#${id} - ${title} - rating: ${rating}`);
             });
         });
     });

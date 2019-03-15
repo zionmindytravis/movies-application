@@ -15,3 +15,7 @@ html, body {
 #ratingRow, #btnRow {
     width: 50%;
 }
+
+#movie-form {
+    background-color: #578C90;
+}

@@ -1,6 +1,8 @@
 Specification
 Your application should:
 
+submit new movie needs to reject blank forms
+
 On page load:
 
 1  Display a "loading..." message
