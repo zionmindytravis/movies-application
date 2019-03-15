@@ -69,7 +69,7 @@ const editMovie = (title, rating, id) => {
         $('#form-heading').html('Edit Movie');
         $('#editTitle').html(`${title}`);
         $('#title').val(`${title}`);
-        $("input[value='0']").attr('checked', true);
+        $("input[name = rating]:checked").val(`${rating}`);
         console.log(`You clicked edit ${id} ${title}`);
     });
 };
