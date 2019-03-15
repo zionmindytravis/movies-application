@@ -66,10 +66,15 @@ addMovie();
 
 const editMovie = (title, rating, id) => {
     $(`#edit${id}`).on('click', function () {
+
+        const random = $('#ratingRow').val()
+        console.log(random);
+
         $('#form-heading').html('Edit Movie');
         $('#editTitle').html(`${title}`);
-        $('#title').val(`${title}`);
-        $("input[name = rating]:checked").val(`${rating}`);
+        $('#editRating').html(`Rating: ${rating}`);
+        $('#title').attr('placeholder', `${title}`);
+        $
         console.log(`You clicked edit ${id} ${title}`);
     });
 };
