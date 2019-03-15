@@ -9,6 +9,41 @@
       "title": "Star Wars: A New Hope",
       "rating": "5",
       "id": 2
+    },
+    {
+      "title": "The Life Aquatic",
+      "rating": "5",
+      "id": 3
+    },
+    {
+      "title": "Gone With The Wind",
+      "rating": "2",
+      "id": 4
+    },
+    {
+      "title": "Zoolander",
+      "rating": "4",
+      "id": 5
+    },
+    {
+      "title": "The Empire Strikes Back",
+      "rating": "5",
+      "id": 6
+    },
+    {
+      "title": "Return of the Jedi",
+      "rating": "3",
+      "id": 7
+    },
+    {
+      "title": "The Phantom Menace",
+      "rating": "1",
+      "id": 8
+    },
+    {
+      "title": "The Royal Tenenbaums",
+      "rating": "5",
+      "id": 9
     }
   ]
 }
