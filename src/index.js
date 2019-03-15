@@ -15,13 +15,11 @@ const {postMovies} = require('./api.js');
 const {editMovies} = require('./api.js');
 
 
-
-getMovies().then((movies) => {
+const movieGet = () => getMovies().then((movies) => {
 
   movies.forEach(({title, rating, id}) => {
 
     $('#movies').append(getHTML(title, rating, id));
-
 
     editMovie(title, rating, id);
 
@@ -34,6 +32,8 @@ getMovies().then((movies) => {
   alert('Oh no! Something went wrong.\nCheck the console for details.')
   console.log(error);
 });
+
+movieGet();
 
 const getHTML = function(title, rating, id) {
   let html =  `<div class="col-6">`;
@@ -72,14 +72,12 @@ const editMovie = (title, rating, id) => {
         $('#submit').toggleClass('hide');
         $('#editSubmit').toggleClass('hide');
         const random = $('#ratingRow').val();
-        console.log(random);
 
         $('#form-heading').html('Edit Movie');
         $('#editTitle').html(`${title}`);
         $('#editRating').html(`Rating: ${rating}`);
         $('#title').val(`${title}`);
         // $("#ratingRow input[name='rating']:checked").val();
-        console.log(`You clicked edit ${id} ${title}`);
 
         let editedMovie;
 
@@ -91,13 +89,11 @@ const editMovie = (title, rating, id) => {
                 id: id
             };
             editMovies(editedMovie);
-            getMovies().then((movies) => {
-                movies.forEach(({title, rating, id}) => {
-                    $('#movies').append(getHTML(title, rating, id));
-                });
-            });
-            console.log(editedMovie);
+            movieGet();
         })
+
+
+
     });
 };
 

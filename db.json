@@ -17,7 +17,7 @@
     },
     {
       "title": "Gone With The Wind",
-      "rating": "3",
+      "rating": "2",
       "id": 4
     },
     {
@@ -44,11 +44,6 @@
       "title": "The Royal Tenenbaums",
       "rating": "5",
       "id": 9
-    },
-    {
-      "title": "New Movie",
-      "rating": "3",
-      "id": 10
     }
   ]
 }
