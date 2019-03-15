@@ -28,6 +28,19 @@ module.exports = {
       const success = 'Movie was successfully edited.';
       console.log(success);
     })
-  }
+  },
+
+  deleteMovie: (id) => {
+    fetch('api/movies/' + id, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(id),
+    }).then(function(){
+      const success = 'Movie was successfully deleted.';
+      console.log(success)
+    })
+  },
 };
 
