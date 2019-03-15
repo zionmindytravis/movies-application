@@ -27,7 +27,6 @@ module.exports = {
     }).then(function(){
       const success = 'Movie was successfully edited.';
       console.log(success);
-      console.log(editedMovie)
     })
   }
 };
