@@ -21,9 +21,7 @@ getMovies().then((movies) => {
     $('#movies').append(getHTML(title, rating, id));
 
 
-    $(`#edit${id}`).on('click', function () {
-        console.log(`You clicked edit${id}`);
-    });
+    editMovie(title, rating, id);
 
     $(`#delete${id}`).on('click', function () {
         console.log(`You clicked delete${id}`);
@@ -65,3 +63,14 @@ const addMovie = () =>
     });
 
 addMovie();
+
+const editMovie = (title, rating, id) => {
+    $(`#edit${id}`).on('click', function () {
+        $('#form-heading').html('Edit Movie');
+        $('#editTitle').html(`${title}`);
+        $('#title').val(`${title}`);
+        $("input[name = rating]:checked").val(`${rating}`);
+        console.log(`You clicked edit ${id} ${title}`);
+    });
+};
+
