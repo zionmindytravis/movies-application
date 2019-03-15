@@ -11,6 +11,7 @@
  * require style imports
  */
 const {getMovies} = require('./api.js');
+const {postMovies} = require('./api.js');
 
 getMovies().then((movies) => {
   // console.log('Here are all the movies:');
@@ -34,9 +35,21 @@ const getHTML = function(title, rating, id) {
 
 const addMovie = () =>
     $('#submit').on('click', function() {
-      let title = $('#title').val();
-      let rating = $('input[name = rating]:checked').val();
-      console.log(`${title} ${rating}`);
 
+        const newMovie = {
+            title: $('#title').val(),
+            rating: $('input[name = rating]:checked').val(),
+        };
+
+        postMovies(newMovie);
+        getMovies().then((movies) => {
+            // console.log('Here are all the movies:');
+            movies.forEach(({title, rating, id}) => {
+
+                $('#movies').append(getHTML(title, rating, id));
+                // console.log(`id#${id} - ${title} - rating: ${rating}`);
+            });
+        });
     });
+
 addMovie();

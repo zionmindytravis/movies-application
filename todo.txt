@@ -9,16 +9,6 @@ On page load:
    message and replace it with html generated from the json response your
    code receives
 
-
-Allow users to add new movies:
-
-1  Create a form for adding a new movie that has fields for the movie's
-   title and rating
-
-2  When the form is submitted, the page should not reload / refresh,
-   instead, your javascript should make a POST request to /api/movies with
-   the information the user put into the form
-
 Allow users to edit existing movies:
 
 1  Give users the option to edit an existing movie:
