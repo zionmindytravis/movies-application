@@ -48,13 +48,13 @@ const starGen = function (rating) {
 const getHTML = function(title, rating, id) {
 
     let starHTML = starGen(rating);
-  let html =  `<div class="col-6">`;
-      html += `<div class="row">`;
-      html += `<h2>${title}</h2><p>`;
-      html += `${starHTML}</p></div>`;
-      html += `<button id="edit${id}" class="btn btn-warning mr-4 row" type="submit">Edit</button>
-            <button id="delete${id}" class="btn btn-danger mr-4 row" type="submit" onClick="window.location.reload()">Delete</button>`;
-      html += `</div>`;
+  let html =  `<div class="col-12 col-md-6 my-2">`;
+      html += `<div class="col">`;
+      html += `<h2 class="mr-2">${title}</h2><p>`;
+      html += `${starHTML}</p>`;
+      html += `<button id="edit${id}" class="btn btn-sm btn-outline-warning mr-4 yellowBtn" type="submit">Edit</button>
+            <button id="delete${id}" class="btn btn-sm btn-outline-warning mr-4      yellowBtn" type="submit" onClick="window.location.reload()">Delete</button>`;
+      html += `</div></div>`;
 
     return html;
 };

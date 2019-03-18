@@ -1,4 +1,12 @@
 
+change placeholder color
+
+
+adjust background image size on mobile
+
+
+
+
 ============================================================================
 Bonuses
 Add a disabled attribute to buttons while their corresponding ajax request is still pending.
