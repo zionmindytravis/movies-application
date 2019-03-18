@@ -2,8 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>My Application</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Movie Database</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+          crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
@@ -13,6 +21,7 @@
     </div>
 
     <div id="movie-form" class="container my-5 hide">
+        <div id="form">
         <div class="row m-4">
             <h1 id="form-heading">Add movie:</h1>
         </div>
@@ -51,6 +60,7 @@
             <button id="submit" class="btn btn-primary m-4 row" type="submit">Submit</button>
             <button id="editSubmit" class="btn btn-primary m-4 row hide" type="submit" onClick="window.location.reload()">Edit</button>
             <button id="cancelEdit" class="btn btn-primary m-4 row hide" type="submit" onClick="window.location.reload()">Cancel</button>
+        </div>
         </div>
         <div class="container">
             <div id="movies" class="row">

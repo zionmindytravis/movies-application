@@ -1,5 +1,13 @@
 html, body {
     height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url('coral2.jpg');
+    background-color: black;
+    color: yellow;
+
 }
 
 /*.container {*/
@@ -9,12 +17,25 @@ html, body {
     /*text-align: center;*/
 /*}*/
 
+h1, h2 {
+    text-transform: uppercase;
+}
+
+#title {
+    width: 400px;
+    padding: 1em;
+    border: 1px solid yellow;
+    background: none;
+
+}
+
 #ratingRow, #btnRow {
     width: 50%;
 }
 
-#movie-form {
-    background-color: #578C90;
+#form {
+    border: 1px solid yellow;
+    margin-bottom: 3em;
 }
 
 .hide{
