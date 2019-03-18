@@ -29,21 +29,6 @@
       "title": "The Empire Strikes Back",
       "rating": "5",
       "id": 6
-    },
-    {
-      "title": "Return of the Jedi",
-      "rating": "3",
-      "id": 7
-    },
-    {
-      "title": "The Phantom Menace",
-      "rating": "1",
-      "id": 8
-    },
-    {
-      "title": "The Royal Tenenbaums",
-      "rating": "5",
-      "id": 9
     }
   ]
 }

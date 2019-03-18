@@ -1,31 +1,3 @@
-Specification
-Your application should:
-
-submit new movie needs to reject blank forms
-
-On page load:
-
-1  Display a "loading..." message
-
-3  When the initial ajax request comes back, remove the "loading..."
-   message and replace it with html generated from the json response your
-   code receives
-
-Allow users to edit existing movies:
-
-1  Give users the option to edit an existing movie:
-
-2  A form should be pre-populated with the selected movie's details
-
-3  Like creating a movie, this should not involve any page reloads,
-   instead your javascript code should make an ajax request when the form
-   is submitted.
-
-
-Delete movies:
-
-1  Each movie should have a "delete" button
-2  When this button is clicked, your javascript should send a DELETE request
 
 ============================================================================
 Bonuses
@@ -35,6 +7,7 @@ Use modals for the creating and editing movie forms
 Add a genre property to every movie
 Allow users to sort the movies by rating, title, or genre (if you have it)
 Allow users to search through the movies by rating, title, or genre (if you have it)
+
 Helpful Hints
 The id property of every movie should not be edited by hand. The purpose of this property is to uniquely identify that particular movie. That is, if we want to delete or modify an existing movie, we can specify what movie we want to change by referencing it's id. When a new movie is created (i.e. when you send a POST request to /api/movies with a title and a rating), the server will respond with the movie object that was created, including a generated id.
 Take a look at the other branches in this repository, as they have configuration/setup for common scenarios, such as including bootstrap in your application.

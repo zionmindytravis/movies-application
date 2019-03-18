@@ -9,9 +9,6 @@ html, body {
     /*text-align: center;*/
 /*}*/
 
-#ajaxLoader{
-    display: none;
-}
 #ratingRow, #btnRow {
     width: 50%;
 }
