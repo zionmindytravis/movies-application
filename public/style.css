@@ -51,11 +51,34 @@ h1, h2 {
     border: 1px solid #ff0;
     color: #ff0;
 }
+
 .yellowBtn:hover {
     background: #ff0;
     border: 1px solid #ff0;
     color: #116185;
 }
+
 ::placeholder {
     color: lightgrey;
+}
+
+#ajaxLoader {
+    position: relative;
+    top: 50%;
+    transform: translateY(-100%);
+    text-align: center;
+}
+
+a {
+    color: yellow;
+    /*#CFD297*/
+            /*#7B8736*/
+            /*#464916*/
+            /*#578C90*/
+            /*#7DAC6B*/
+            /*#CC6666*/
+}
+
+a:hover {
+    color:  #7DAC6B;
 }

@@ -46,14 +46,20 @@ const starGen = function (rating) {
 
 
 const getHTML = function(title, rating, id) {
-
     let starHTML = starGen(rating);
-  let html =  `<div class="col-12 col-md-6 my-2">`;
-      html += `<div class="col">`;
-      html += `<h2 class="mr-2">${title}</h2><p>`;
-      html += `${starHTML}</p>`;
-      html += `<button id="edit${id}" class="btn btn-sm btn-outline-warning mr-4 yellowBtn" type="submit">Edit</button>
-            <button id="delete${id}" class="btn btn-sm btn-outline-warning mr-4      yellowBtn" type="submit" onClick="window.location.reload()">Delete</button>`;
+    let html =  `<div class="col-12 col-md-6 my-2">`;
+
+
+
+    html += `<div class="col">`;
+    html += `<h2 class="mr-2">${title}</h2><p>`;
+    html += `${starHTML}</p>`;
+    html += `<span class="icons" style="font-size: 1.5em; color:`;
+    html += `yellow;"><a href='#'><i id="edit${id}" class="far `;
+    html += `fa-edit"></i></a><a href='#'>`;
+    html += `<i id="delete${id}" class="far fa-times-circle ml-2" `;
+    html += `</i></a>`;
+    html += `</span>`;
       html += `</div></div>`;
 
     return html;
@@ -88,9 +94,9 @@ const editMovie = (title, rating, id) => {
         $('#editSubmit').toggleClass('hide');
         $('#cancelEdit').toggleClass('hide');
 
-        $('#form-heading').html('Edit Movie');
-        $('#editTitle').html(`${title}`);
-        $('#editRating').html(`Rating: ${rating}`);
+        $('#form-heading').html(`Edit Movie: ${title}`);
+        // $('#editTitle').html(`${title}`);
+        // $('#editRating').html(`Rating: ${rating}`);
         $('#title').val(`${title}`);
         document.getElementById(`${rating}`).checked = true;
 
@@ -107,9 +113,12 @@ const editMovie = (title, rating, id) => {
     });
 };
 
-const deleteMovies = (id) => {
+const deleteMovies = (title, id) => {
     $(`#delete${id}`).on('click', function () {
         console.log(`You clicked delete ${id}`);
-        deleteMovie(id);
+        $('#form-heading').html(`Confirm delete: ${title}?`);
+
+
+        // deleteMovie(id);
     });
 };

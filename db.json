@@ -6,29 +6,89 @@
       "id": 1
     },
     {
-      "title": "Star Wars: A New Hope",
-      "rating": "4",
-      "id": 2
-    },
-    {
       "title": "The Life Aquatic",
       "rating": "5",
       "id": 3
     },
     {
-      "title": "Gone With The Wind",
-      "rating": "2",
-      "id": 4
-    },
-    {
       "title": "Zoolander",
-      "rating": "1",
+      "rating": "4",
       "id": 5
     },
     {
       "title": "The Empire Strikes Back",
       "rating": "5",
       "id": 6
+    },
+    {
+      "title": "Indiana Jones and the Temple of Doom",
+      "rating": "5",
+      "id": 8
+    },
+    {
+      "title": "Indiana Jones and the Last Crusade",
+      "rating": "5",
+      "id": 9
+    },
+    {
+      "title": "The Royal Tenenbaums",
+      "rating": "5",
+      "id": 10
+    },
+    {
+      "title": "Casino Royale",
+      "rating": "5",
+      "id": 11
+    },
+    {
+      "title": "Die Hard",
+      "rating": "5",
+      "id": 12
+    },
+    {
+      "title": "The Matrix",
+      "rating": "5",
+      "id": 13
+    },
+    {
+      "title": "The World is Not Enough",
+      "rating": "4",
+      "id": 14
+    },
+    {
+      "title": "Alien",
+      "rating": "5",
+      "id": 15
+    },
+    {
+      "title": "Napoleon Dynamite",
+      "rating": "3",
+      "id": 16
+    },
+    {
+      "title": "Tron",
+      "rating": "3",
+      "id": 17
+    },
+    {
+      "title": "Tron: Legacy",
+      "rating": "4",
+      "id": 18
+    },
+    {
+      "title": "Star Trek III: The Wrath of Khan",
+      "rating": "4",
+      "id": 19
+    },
+    {
+      "title": "Inside Man",
+      "rating": "5",
+      "id": 20
+    },
+    {
+      "title": "Mad Max: Fury Road",
+      "rating": "5",
+      "id": 21
     }
   ]
 }

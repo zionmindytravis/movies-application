@@ -18,6 +18,7 @@
     <div id="ajaxLoader">
         <h2>Please Wait!</h2>
         <p>Getting requested info!</p>
+
     </div>
 
     <div id="movie-form" class="container my-5 hide">
@@ -25,12 +26,12 @@
         <div class="row m-4">
             <h1 id="form-heading">Add movie:</h1>
         </div>
-        <div class="row m-4">
-            <h2 id="editTitle"></h2>
-        </div>
-        <div class="row m-4">
-            <p id="editRating"></p>
-        </div>
+        <!--<div class="row m-4 hide">-->
+            <!--<h2 id="editTitle"></h2>-->
+        <!--</div>-->
+        <!--<div class="row m-4 hide">-->
+            <!--<p id="editRating"></p>-->
+        <!--</div>-->
         <div class="row m-4">
             <input id="title" type="text" placeholder="title"><br>
         </div>
@@ -57,7 +58,7 @@
         </form>
 
         <div id="btnRow" class="row">
-            <button id="submit" class="btn yellowBtn m-4 row" type="submit">Submit</button>
+            <button id="submit" class="btn yellowBtn m-4 row" type="submit" onClick="window.location.reload()">Submit</button>
             <button id="editSubmit" class="btn yellowBtn m-4 row hide" type="submit" onClick="window.location.reload()">Edit</button>
             <button id="cancelEdit" class="btn yellowBtn m-4 row hide" type="submit" onClick="window.location.reload()">Cancel</button>
         </div>
