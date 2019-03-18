@@ -13,6 +13,7 @@
 const {getMovies} = require('./api.js');
 const {postMovies} = require('./api.js');
 const {editMovies} = require('./api.js');
+const {deleteMovie} = require('./api.js');
 
 
 const movieGet = () => getMovies().then((movies) => {
@@ -23,9 +24,7 @@ const movieGet = () => getMovies().then((movies) => {
 
     editMovie(title, rating, id);
 
-    $(`#delete${id}`).on('click', function () {
-        console.log(`You clicked delete${id}`);
-    });
+    deleteMovies(id);
 
   });
 }).catch((error) => {
@@ -89,11 +88,13 @@ const editMovie = (title, rating, id) => {
                 id: id
             };
             editMovies(editedMovie);
-            movieGet();
         })
-
-
-
     });
 };
 
+const deleteMovies = (id) => {
+    $(`#delete${id}`).on('click', function () {
+        console.log(`You clicked delete ${id}`);
+        deleteMovie(id);
+    });
+};
