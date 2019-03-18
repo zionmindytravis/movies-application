@@ -7,8 +7,12 @@
     <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-    <div id="movie-form" class="container my-5">
+    <div id="ajaxLoader">
+        <h2>Please Wait!</h2>
+        <p>Getting requested info!</p>
+    </div>
 
+    <div id="movie-form" class="container my-5 hide">
         <div class="row m-4">
             <h1 id="form-heading">Add movie:</h1>
         </div>
@@ -46,22 +50,16 @@
         <div id="btnRow" class="row">
             <button id="submit" class="btn btn-primary m-4 row" type="submit">Submit</button>
             <button id="editSubmit" class="btn btn-primary m-4 row hide" type="submit" onClick="window.location.reload()">Edit</button>
+            <button id="cancelEdit" class="btn btn-primary m-4 row hide" type="submit" onClick="window.location.reload()">Cancel</button>
         </div>
+        <div class="container">
+            <div id="movies" class="row">
 
-
-    </div>
-
-    <div class="container">
-        <div id="movies" class="row">
-
+            </div>
         </div>
     </div>
 
 
-    <div id="ajaxLoader">
-        <h2>Please Wait!</h2>
-        <p>Getting requested info!</p>
-    </div>
 
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

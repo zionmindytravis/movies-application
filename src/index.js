@@ -19,14 +19,14 @@ const {deleteMovie} = require('./api.js');
 const movieGet = () => getMovies().then((movies) => {
 
   movies.forEach(({title, rating, id}) => {
-
     $('#movies').append(getHTML(title, rating, id));
-
     editMovie(title, rating, id);
-
     deleteMovies(id);
-
   });
+
+  $('#movie-form').removeClass('hide');
+  $('#ajaxLoader').addClass('hide');
+
 }).catch((error) => {
   alert('Oh no! Something went wrong.\nCheck the console for details.')
   console.log(error);
@@ -41,7 +41,7 @@ const getHTML = function(title, rating, id) {
       html += `<strong>Rating:</strong>`;
       html += `${rating}</p></div>`;
       html += `<button id="edit${id}" class="btn btn-warning mr-4 row" type="submit">Edit</button>
-            <button id="delete${id}" class="btn btn-danger mr-4 row" type="submit">Delete</button>`;
+            <button id="delete${id}" class="btn btn-danger mr-4 row" type="submit" onClick="window.location.reload()">Delete</button>`;
       html += `</div>`;
 
     return html;
@@ -50,17 +50,21 @@ const getHTML = function(title, rating, id) {
 const addMovie = () =>
     $('#submit').on('click', function() {
         console.log(`You clicked the submit button`);
-        const newMovie = {
-            title: $('#title').val(),
-            rating: $('input[name = rating]:checked').val(),
-        };
+        if ($('#title').val === '' || !$('input[name = rating]:checked')) {
+            console.log(`Form not filled out`);
+        } else {
+            const newMovie = {
+                title: $('#title').val(),
+                rating: $('input[name = rating]:checked').val(),
+            };
 
-        postMovies(newMovie);
-        getMovies().then((movies) => {
-            movies.forEach(({title, rating, id}) => {
-                $('#movies').append(getHTML(title, rating, id));
+            postMovies(newMovie);
+            getMovies().then((movies) => {
+                movies.forEach(({title, rating, id}) => {
+                    $('#movies').append(getHTML(title, rating, id));
+                });
             });
-        });
+        }
     });
 
 addMovie();
@@ -70,16 +74,15 @@ const editMovie = (title, rating, id) => {
 
         $('#submit').toggleClass('hide');
         $('#editSubmit').toggleClass('hide');
-        const random = $('#ratingRow').val();
+        $('#cancelEdit').toggleClass('hide');
 
         $('#form-heading').html('Edit Movie');
         $('#editTitle').html(`${title}`);
         $('#editRating').html(`Rating: ${rating}`);
         $('#title').val(`${title}`);
-        // $("#ratingRow input[name='rating']:checked").val();
+        document.getElementById(`${rating}`).checked = true;
 
         let editedMovie;
-
 
         $('#editSubmit').on('click', function() {
             editedMovie = {
