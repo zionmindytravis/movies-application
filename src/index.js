@@ -119,6 +119,9 @@ const deleteMovies = (title, id) => {
         $('#form-heading').html(`Delete ${title}?`);
         $('#title, #ratingRow, #cancelEdit, #confirm, #submit').toggleClass('hide');
 
-        deleteMovie(id);
+
+        $('#confirm').on('click', function() {
+            deleteMovie(id);
+        })
     });
 };

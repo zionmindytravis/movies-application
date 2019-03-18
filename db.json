@@ -79,6 +79,21 @@
       "title": "Mad Max: Fury Road",
       "rating": "5",
       "id": 21
+    },
+    {
+      "title": "The Life Aquatic",
+      "rating": "5",
+      "id": 22
+    },
+    {
+      "title": "Groundhog Day",
+      "rating": "4",
+      "id": 23
+    },
+    {
+      "title": "The Notebook",
+      "rating": "3",
+      "id": 24
     }
   ]
 }
