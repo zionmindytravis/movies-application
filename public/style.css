@@ -5,7 +5,12 @@ html, body {
 
 body {
     background-image: url('coral2.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
     background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: yellow;
 
 }
@@ -26,7 +31,7 @@ h1, h2 {
     padding: 1em;
     border: 1px solid yellow;
     background: none;
-
+    color: #ff0;
 }
 
 #ratingRow, #btnRow {
@@ -40,4 +45,17 @@ h1, h2 {
 
 .hide{
     display: none;
+}
+
+.yellowBtn {
+    border: 1px solid #ff0;
+    color: #ff0;
+}
+.yellowBtn:hover {
+    background: #ff0;
+    border: 1px solid #ff0;
+    color: #116185;
+}
+::placeholder {
+    color: lightgrey;
 }
