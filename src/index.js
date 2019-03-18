@@ -21,7 +21,7 @@ const movieGet = () => getMovies().then((movies) => {
   movies.forEach(({title, rating, id}) => {
     $('#movies').append(getHTML(title, rating, id));
     editMovie(title, rating, id);
-    deleteMovies(id);
+    deleteMovies(title, id);
   });
 
   $('#movie-form').removeClass('hide');
@@ -60,7 +60,7 @@ const getHTML = function(title, rating, id) {
     html += `<i id="delete${id}" class="far fa-times-circle ml-2" `;
     html += `</i></a>`;
     html += `</span>`;
-      html += `</div></div>`;
+    html += `</div></div>`;
 
     return html;
 };
@@ -116,9 +116,9 @@ const editMovie = (title, rating, id) => {
 const deleteMovies = (title, id) => {
     $(`#delete${id}`).on('click', function () {
         console.log(`You clicked delete ${id}`);
-        $('#form-heading').html(`Confirm delete: ${title}?`);
+        $('#form-heading').html(`Delete ${title}?`);
+        $('#title, #ratingRow, #cancelEdit, #confirm, #submit').toggleClass('hide');
 
-
-        // deleteMovie(id);
+        deleteMovie(id);
     });
 };

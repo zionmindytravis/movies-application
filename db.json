@@ -1,16 +1,6 @@
 {
   "movies": [
     {
-      "title": "Casablanca",
-      "rating": "4",
-      "id": 1
-    },
-    {
-      "title": "The Life Aquatic",
-      "rating": "5",
-      "id": 3
-    },
-    {
       "title": "Zoolander",
       "rating": "4",
       "id": 5
