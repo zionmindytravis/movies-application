@@ -34,12 +34,24 @@ const movieGet = () => getMovies().then((movies) => {
 
 movieGet();
 
+const starGen = function (rating) {
+    let starHTML = '';
+
+    for (let i = 0; i < rating; i++) {
+        starHTML += '<i class="fas fa-star"></i>'
+    }
+
+    return starHTML;
+};
+
+
 const getHTML = function(title, rating, id) {
+
+    let starHTML = starGen(rating);
   let html =  `<div class="col-6">`;
       html += `<div class="row">`;
       html += `<h2>${title}</h2><p>`;
-      html += `<strong>Rating:</strong>`;
-      html += `${rating}</p></div>`;
+      html += `${starHTML}</p></div>`;
       html += `<button id="edit${id}" class="btn btn-warning mr-4 row" type="submit">Edit</button>
             <button id="delete${id}" class="btn btn-danger mr-4 row" type="submit" onClick="window.location.reload()">Delete</button>`;
       html += `</div>`;
