@@ -51,7 +51,7 @@ const getHTML = function(title, rating, id) {
 
 
 
-    html += `<div class="col">`;
+    html += `<div class="col mb-4">`;
     html += `<h2 class="mr-2">${title}</h2><p>`;
     html += `${starHTML}</p>`;
     html += `<span class="icons" style="font-size: 1.5em; color:`;
